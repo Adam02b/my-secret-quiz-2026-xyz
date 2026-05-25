@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizball App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-board">
+            <div class="team-score" id="teamA-box">
+                <h2>ΟΜΑΔΑ Α</h2>
+                <div class="score" id="scoreA">0</div>
+                <div class="manual-btns">
+                    <button onclick="changeScore('A', 1)">+1</button>
+                    <button onclick="changeScore('A', -1)">-1</button>
+                </div>
+            </div>
+            
+            <div class="main-title">
+                <h1>FOOTBALL QUIZ</h1>
+                <button class="reset-btn" onclick="resetPlayedQuestions()">🔄 Καθαρισμός Μνήμης</button>
+            </div>
+            
+            <div class="team-score" id="teamB-box">
+                <h2>ΟΜΑΔΑ Β</h2>
+                <div class="score" id="scoreB">0</div>
+                <div class="manual-btns">
+                    <button onclick="changeScore('B', 1)">+1</button>
+                    <button onclick="changeScore('B', -1)">-1</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-board" id="quizBoard"></div>
+    </div>
+
+    <div class="modal" id="quizModal">
+        <div class="modal-content" id="modalContentBox">
+            <h2 id="modalTitle">Ερώτηση</h2>
+            
+            <div id="questionArea">
+                <div id="modalQuestionText" class="question-text"></div>
+                <div id="modalImageContainer"></div>
+                
+                <div id="top5Wrapper" style="display: none;">
+                    <div id="top5Lives" class="top5-lives">Λάθη: <span>✔️ Καθαρό</span></div>
+                    <div id="top5Container" class="top5-list"></div>
+                    <button id="stopTop5Btn" class="stop-top5-btn" onclick="stopWithOnePoint()" style="display: none;">🛑 Σταμάτημα με 1 Πόντο</button>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" id="userAnswerInput" placeholder="Γράψτε την απάντηση εδώ..." autocomplete="off">
+                    <button class="submit-answer-btn" id="submitBtn" onclick="checkTypedAnswer()">ΥΠΟΒΟΛΗ ⚽</button>
+                </div>
+            </div>
+
+            <div id="resultArea" style="display: none;">
+                <div id="resultStatusText" style="font-size: 32px; font-weight: bold; margin-bottom: 15px;"></div>
+                <div id="resultInfoText" style="font-size: 20px; margin-bottom: 25px; line-height: 1.6;"></div>
+                <button class="next-q-btn" onclick="closeModalAndNext()">ΕΠΟΜΕΝΗ ΕΡΩΤΗΣΗ ➡️</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="goalSound" src="goal.mp3" preload="auto"></audio>
+    <audio id="wrongSound" src="wrong.mp3" preload="auto"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
