@@ -245,3 +245,31 @@ body {
     max-width: 850px !important; 
     width: 90% !important;
 }
+/* Ρυθμίσεις για κινητά */
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 15px;
+        font-size: 18px; /* Μεγαλύτερα γράμματα για να διαβάζονται */
+    }
+
+    #questionText {
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    button {
+        display: block;
+        width: 100%; /* Τα κουμπιά πιάνουν όλο το πλάτος */
+        padding: 20px; /* Πιο εύκολο να τα πατάς */
+        margin-bottom: 15px;
+        font-size: 18px;
+        border-radius: 10px; /* Πιο μοντέρνο look */
+    }
+
+    img {
+        max-width: 100%; /* Η εικόνα δεν θα βγαίνει εκτός οθόνης */
+        height: auto;
+    }
+}
