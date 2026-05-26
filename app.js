@@ -218,6 +218,30 @@ const questionsDatabase = {
                     { display: "Ντιέγκο Μαραντόνα (34 γκολ)", synonyms: ["μαραντονα", "maradona", "diego maradona", "ντιεγκο μαραντονα"] }
                 ]
             },
+            {
+    id: 2,
+    isTop5: true,
+    text: "Βρείτε τους 5 παίκτες με τις περισσότερες συμμετοχές ως συμπαίκτες του Luka Modrić:",
+    answers: [
+        { display: "Καρίμ Μπενζεμά", synonyms: ["καριμ μπενζεμα", "μπενζεμα", "benzema", "karim benzema", "karim"] },
+        { display: "Τόνι Κρόος", synonyms: ["τονι κροος", "κροος", "kroos", "toni kroos", "toni"] },
+        { display: "Ντάνι Καρβαχάλ", synonyms: ["ντανι καρβαχαλ", "καρβαχαλ", "carvajal", "dani carvajal", "dani"] },
+        { display: "Γκάρεθ Μπέιλ", synonyms: ["γκαρεθ μπειλ", "μπειλ", "bale", "gareth bale", "gareth"] },
+        { display: "Σέρχιο Ράμος", synonyms: ["σερχιο ραμος", "ραμος", "ramos", "sergio ramos", "sergio"] }
+    ]
+},
+{
+    id: 3,
+    isTop5: true,
+    text: "Βρείτε τους 5 παίκτες με τις περισσότερες συμμετοχές ως συμπαίκτες του Thomas Müller:",
+    answers: [
+        { display: "Μάνουελ Νόιερ", synonyms: ["μανουελ νοιερ", "νοιερ", "neuer", "manuel neuer", "manuel"] },
+        { display: "Τζόσουα Κίμιχ", synonyms: ["τζοσουα κιμιχ", "κιμιχ", "kimmich", "joshua kimmich", "joshua"] },
+        { display: "Φίλιπ Λαμ", synonyms: ["φιλιπ λαμ", "λαμ", "lahm", "philipp lahm", "philipp"] },
+        { display: "Ζερόμ Μπόατενγκ", synonyms: ["ζερομ μποατενγκ", "μποατενγκ", "boateng", "jerome boateng", "jerome"] },
+        { display: "Νταβίντ Αλάμπα", synonyms: ["νταβιντ αλαμπα", "αλαμπα", "alaba", "david alaba", "david"] }
+    ]
+            },
             { 
                 id: 514, 
                 isTop5: true,
@@ -363,6 +387,9 @@ const questionsDatabase = {
             { id: 416, text: "Ποιος Ισπανός τεχνικός έγινε ο πρώτος προπονητής στην ιστορία που έκανε το 'Treble' (Πρωτάθλημα, Κύπελλο, UCL) με δύο διαφορετικές ομάδες (Μπαρσελόνα & Μάντσεστερ Σίτι);", correct: "Πεπ Γκουαρδιόλα", synonyms: ["πεπ γκουαρδιολα", "γκουαρδιολα", "guardiola", "pep guardiola", "πεπ"] }
         ],
         2: [
+            {"question": "Ποια ομάδα από την Τοσκάνη ανέβηκε στη Serie A για τη σεζόν 2025-2026;","answer": "Pisa"},
+            { id: 404, text: "Ποιος παίκτης έχει πετύχει τα περισσότερα γκολ στην παρθενική του σεζόν στο ισπανικό πρωτάθλημα (La Liga);", correct: "Ρονάλντο Ναζάριο", synonyms: ["ροναλντο ναζαριο", "ροναλντο", "ronaldo nazario", "ronaldo", "φαινομενο"] },
+            { id: 405, text: "Ποια ιταλική ομάδα έχει τις περισσότερες κατακτήσεις Κυπέλλου Ιταλίας στην ιστορία της;", correct: "Γιουβέντους", synonyms: ["γιουβεντους", "juventus", "juve"] },
             { id: 417, text: "Ποια εθνική ομάδα κατέκτησε το Euro 1992, παρότι δεν είχε καν προκριθεί στα τελικά και μαζεύτηκε από τις... παραλίες λόγω του αποκλεισμού της Γιουγκοσλαβίας;", correct: "Δανία", synonyms: ["δανια", "denmark"] },
             { id: 418, text: "Ποιος Ιταλός σταρ έχασε το τελευταίο και καθοριστικό πέναλτι στον τελικό του Μουντιάλ 1994 εναντίον της Βραζιλίας;", correct: "Ρομπέρτο Μπάτζιο", synonyms: ["μπατζιο", "baggio", "roberto baggio", "ρομπερτο μπατζιο"] },
             { id: 419, text: "Ποια ομάδα κατέκτησε το Champions League το 2004, κάνοντας την τεράστια έκπληξη με προπονητή τον Ζοσέ Μουρίνιο;", correct: "Πόρτο", synonyms: ["πορτο", "porto"] },
@@ -506,6 +533,18 @@ const questionsDatabase = {
             },
             { 
                 id: 502, 
+                text: "Ποιος παίκτης έχει αγωνιστεί και στις 2 αυτές ομάδες;<br><b>Wolfsburg + Torino</b>", 
+                correct: "Ρικάρντο Ροντρίγκες", 
+                synonyms: ["ρικαρντο ροντριγκες", "ροντριγκες", "ricardo rodriguez", "rodriguez", "ricardo"] 
+            },
+            { 
+               id: 503, 
+               text: "Ποιος παίκτης έχει αγωνιστεί και στις 2 αυτές ομάδες;<br><b>Marseille + Real Betis</b>", 
+               correct: "Σεντρίκ Μπακαμπού", 
+               synonyms: ["σεδρικ μπακαμπου", "μπακαμπου", "cedric bakambu", "bakambu", "cedric"] 
+            },
+            { 
+                id: 502, 
                 text: "Ποιος παίκτης έχει αγωνιστεί και στις 2 αυτές ομάδες;<br><b>Ρεάλ Μαδρίτης + Άρσεναλ</b>", 
                 correct: "Μεσούτ Οζίλ", 
                 synonyms: ["οζιλ", "ozil", "mesut ozil", "ανελκα", "anelka", "ρεγιες", "reyes", "θεμπάγιος", "ceballos", "οντεγκαρντ", "odegaard"] 
@@ -636,6 +675,9 @@ const questionsDatabase = {
             { id: 632, text: "Σε ποια πόλη της Αυστρίας εδρεύει η Ραπίντ Βιέννης;", correct: "Βιέννη", synonyms: ["βιεννη", "vienna", "wien"] }
         ],
         3: [
+            { id: 501, text: "Από ποια χώρα (εκτός Ισπανίας) κατάγονται οι περισσότεροι ποδοσφαιριστές στη La Liga για τη σεζόν 2024-2025;", correct: "Αργεντινή", synonyms: ["αργεντινη", "argentina"] },
+            { id: 502, text: "Ποια ομάδα από την Τοσκάνη κέρδισε την άνοδο και αγωνίζεται στη Serie A τη σεζόν 2025-2026;", correct: "Πίζα", synonyms: ["πιζα", "pisa"] },
+            { id: 503, text: "Σε ποια πόλη θα διεξαχθεί ο τελικός του Super Cup το 2025;", correct: "Κλάγκενφουρτ", synonyms: ["κλαγκενφουρτ", "klagenfurt"] },
             { id: 633, text: "Το στάδιο 'Estádio da Luz' είναι η έδρα της Μπενφίκα. Σε ποια πόλη βρίσκεται;", correct: "Λισαβόνα", synonyms: ["λισαβονα", "lisbon", "lisboa"] },
             { id: 634, text: "Η FCSB (πρώην Στεάουα) παίζει σε ποια πόλη;", correct: "Βουκουρέστι", synonyms: ["βουκουρεστι", "bucharest", "bucuresti"] },
             { id: 635, text: "Η Καραμπάγ αναγκάζεται να παίζει τους ευρωπαϊκούς της αγώνες σε ποια πόλη του Αζερμπαϊτζάν;", correct: "Μπακού", synonyms: ["μπακου", "baku"] },
