@@ -49,7 +49,7 @@ const questionsDatabase = {
         { display: "AC Milan – 8", synonyms: ["ac milan", "milan"] },
         { display: "Bayern Munich – 5", synonyms: ["bayern munich", "bayern"] }
     ] 
-};
+},
             { 
                 id: 2, 
                 isTop5: true,
