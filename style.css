@@ -247,42 +247,21 @@ body {
 }
 /* Ρυθμίσεις για κινητά */
 @media (max-width: 768px) {
-    body { padding: 10px; }
-
-    .score-board {
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    .team-score {
-        min-width: 100px;
-        padding: 10px;
-    }
-
-    .score { font-size: 32px; }
-
-    /* Διόρθωση πλέγματος κατηγοριών */
     .quiz-board {
-        grid-template-columns: repeat(2, 1fr); /* 2 στήλες πάντα σε κινητό */
-        gap: 8px;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* 2 ίσες στήλες */
+        gap: 5px !important;
     }
 
-    .category-column { padding: 5px; }
-
-    /* Στοχευμένα κουμπιά για να μην γίνονται τεράστια */
     .quiz-btn {
-        padding: 10px 5px;
-        font-size: 12px;
-        margin-bottom: 5px;
+        width: 100% !important;
+        padding: 8px 2px !important;
+        font-size: 11px !important; /* Μικρότερη γραμματοσειρά για να χωράνε */
+        margin-bottom: 4px !important;
     }
 
-    /* Modal προσαρμογή */
-    .modal-content {
-        width: 95% !important;
-        padding: 15px;
+    .category-header {
+        font-size: 10px !important;
+        padding: 5px !important;
     }
-
-    .question-text { font-size: 18px; }
-    
-    #userAnswerInput { width: 100%; box-sizing: border-box; }
 }
