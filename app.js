@@ -15,6 +15,42 @@ const questionsDatabase = {
                 ]
             },
             { 
+    id: 515, 
+    isTop5: true, 
+    text: "TOP 5 ακριβότερες μεταγραφές στην ιστορία της La Liga:", 
+    answers: [
+        { display: "Philippe Coutinho (€135M)", synonyms: ["philippe coutinho", "coutinho"] },
+        { display: "João Félix (€127M)", synonyms: ["joao felix", "felix"] },
+        { display: "Antoine Griezmann (€120M)", synonyms: ["antoine griezmann", "griezmann"] },
+        { display: "Ousmane Dembélé (€105M)", synonyms: ["ousmane dembele", "dembele"] },
+        { display: "Eden Hazard (€100M)", synonyms: ["eden hazard", "hazard"] }
+    ] 
+},
+{ 
+    id: 516, 
+    isTop5: true, 
+    text: "TOP 5 ακριβότερες μεταγραφές στην ιστορία της Premier League:", 
+    answers: [
+        { display: "Alexander Isak (£145M)", synonyms: ["alexander isak", "isak"] },
+        { display: "Enzo Fernández (£121M)", synonyms: ["enzo fernandez", "enzo"] },
+        { display: "Moisés Caicedo (£116M)", synonyms: ["moises caicedo", "caicedo"] },
+        { display: "Florian Wirtz (£112.5M)", synonyms: ["florian wirtz", "wirtz"] },
+        { display: "Declan Rice (£105M)", synonyms: ["declan rice", "rice"] }
+    ] 
+},
+{ 
+    id: 517, 
+    isTop5: true, 
+    text: "TOP 5 ομάδες με τις περισσότερες Χρυσές Μπάλες (Ballon d’Or):", 
+    answers: [
+        { display: "FC Barcelona – 12", synonyms: ["fc barcelona", "barcelona"] },
+        { display: "Real Madrid – 12", synonyms: ["real madrid", "real"] },
+        { display: "Juventus – 8", synonyms: ["juventus"] },
+        { display: "AC Milan – 8", synonyms: ["ac milan", "milan"] },
+        { display: "Bayern Munich – 5", synonyms: ["bayern munich", "bayern"] }
+    ] 
+};
+            { 
                 id: 2, 
                 isTop5: true,
                 text: "Βρείτε τους TOP 5 σκόρερ στην ιστορία της Εθνικής Γαλλίας:", 
