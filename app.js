@@ -28,4 +28,47 @@ async function loadQuestions() {
 }
 
 // Κάλεσε αυτή τη συνάρτηση μόλις φορτώσει η σελίδα
-loadQuestions();
+async function loadQuestions() {
+    try {
+        const response = await fetch(SPREADSHEET_URL);
+        const data = await response.text();
+        const rows = data.split('\n').slice(1); 
+        
+        // Δημιουργία της δομής που περιμένει το παιχνίδι σου
+        const db = {};
+
+        rows.forEach(row => {
+            const cols = row.split(',');
+            if (cols.length < 5) return; // Ασφάλεια αν η γραμμή είναι άδεια
+
+            const [id, category, text, answersStr, synonymsStr] = cols;
+
+            if (!db[category]) db[category] = {};
+            if (!db[category][3]) db[category][3] = [];
+
+            // Μετατροπή των απαντήσεων και συνωνύμων
+            const ansList = answersStr.split(';').map((ans, index) => {
+                return {
+                    display: ans,
+                    synonyms: synonymsStr.split(':')[index] ? synonymsStr.split(':')[index].split(',') : []
+                };
+            });
+
+            db[category][3].push({
+                id: parseInt(id),
+                isTop5: true,
+                text: text,
+                answers: ansList
+            });
+        });
+
+        questionsDatabase = db;
+        console.log("Το παιχνίδι είναι έτοιμο! Δεδομένα:", questionsDatabase);
+        
+        // ΕΔΩ ΚΑΛΕΣΕ ΤΗ ΣΥΝΑΡΤΗΣΗ ΠΟΥ ΞΕΚΙΝΑΕΙ ΤΟ ΠΑΙΧΝΙΔΙ ΣΟΥ
+        // π.χ. initGame(); 
+        
+    } catch (error) {
+        console.error("Σφάλμα:", error);
+    }
+}
